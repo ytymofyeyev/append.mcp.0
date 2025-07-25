@@ -291,7 +291,7 @@ Time2n.default <- function(x, T, enrollment, ratio = 1) {
   timeAux <- c(0, cumsum(enrollment$duration))
   N_rand <- cumsum(c(0, enrollment$rate * c(enrollment$duration)))
 
-  approx(
+  stats::approx(
     x = timeAux + maturatyTime,
     y = N_rand * exp(as.numeric(-eta) * (maturatyTime)),
     rule = 2,
@@ -696,12 +696,12 @@ knit_MT_table <- function(hyp_testing_dataset, digits = 5) {
       kable_styling(latex_options = c("hold_position", "repeat_header")) %>%
       pack_rows(index = table(fct_inorder(df$hypNames)))
   } else if (knitr::pandoc_to("docx")) {
-    require(flextable)
+    #require(flextable)
     df <-
       data.frame(lapply(df, function(x) {
         gsub("<br>", "\n", x)
       }), stringsAsFactors = F)
-    flextable(df)
+    flextable::flextable(df)
   }
 }
 
@@ -751,12 +751,12 @@ knit_MT_grSeq_table <- function(hyp_testing_dataset, digits = 5, include_nominal
       kable_styling(latex_options = c("hold_position", "repeat_header")) %>%
       pack_rows(index = table(fct_inorder(df$hypNames)))
   } else if (knitr::pandoc_to("docx")) {
-    require(flextable)
+    #require(flextable)
     df <-
       data.frame(lapply(df, function(x) {
         gsub("<br>", "\n", x)
       }), stringsAsFactors = F)
-    flextable(df)
+    flextable::flextable(df)
   }
 }
 

@@ -19,6 +19,17 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    gsDesign
+    dplyr,
+    flextable,
+    ggplot2,
+    gsDesign,
+    knitr,
+    lubridate,
+    magrittr,
+    purrr,
+    RColorBrewer,
+    stats,
+    tibble,
+    vistime
 URL: https://github.com/ytymofyeyev/append.mcp.0
 BugReports: https://github.com/ytymofyeyev/append.mcp.0/issues
