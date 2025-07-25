@@ -20,3 +20,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     gsDesign
+URL: https://github.com/ytymofyeyev/append.mcp.0
+BugReports: https://github.com/ytymofyeyev/append.mcp.0/issues
